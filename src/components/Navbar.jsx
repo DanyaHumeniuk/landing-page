@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="pl-2">
                 <a href="" className="class">
                     <span className="font-medium">OLHA</span> 
-                    <span className="font-extrabold">VITYUK</span>
+                    <span className="font-extrabold bg-gradient-to-r from-neutral-800 to-pink-400 bg-clip-text text-transparent">VITYUK</span>
                 </a>
             </div>
             <div className="md:hidden">
