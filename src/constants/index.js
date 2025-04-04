@@ -19,30 +19,30 @@ import user6 from "../assets/user6.webp";
 
 export const LINKS = [
   {
-    name: "Services",
+    name: "Послуги",
     link: "#services",
   },
   {
-    name: "Portfolio",
+    name: "Портфоліо",
     link: "#portfolio",
   },
   {
-    name: "About",
+    name: "Про мене",
     link: "#about",
   },
   {
-    name: "Reviews",
+    name: "Відгуки",
     link: "#reviews",
   },
   {
-    name: "Contact",
+    name: "Контакт",
     link: "#contact",
   },
 ];
 
 export const HERO_CONTENT = {
-  title: "VastuSpaze",
-  subtitle: "Reimagine Your Space with Expert Renovation Services",
+  title: "Тета-практик",
+  subtitle: "Розкрий свої можливості, супер силу, та ресурси роду!",
   image: hero,
 };
 
