@@ -3,7 +3,7 @@ import hero from "../assets/heroPhoto3.jpeg"
 
 const HeroSection = () => {
   return (
-    <section className="grid place-items-center min-h-screen w-screen overflow-hidden">
+    <section className="grid place-items-center min-h-screen w-screen overflow-hidden border-b-2 border-neutral-900">
         
         <div className="grid w-full h-full">
             

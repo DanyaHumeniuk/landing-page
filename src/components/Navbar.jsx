@@ -10,25 +10,25 @@ const Navbar = () => {
             <li>
                 <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer">
                 Послуги
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                 </a>
             </li>
             <li>
                 <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer">
                 Про мене
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                 </a>
             </li>
             <li>
                 <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer">
                 Відгуки
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                 </a>
             </li>
             <li>
                 <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer">
                 Контакт
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                 </a>
             </li>
 </ul>
