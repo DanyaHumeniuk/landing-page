@@ -1,46 +1,37 @@
-import {useState} from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import {LINKS} from "../constants"
-
-
 
 
 const Navbar = () => {
-    const[isOpen, setIsOpen] = useState(false)
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen)
-    }
   return (
-    <nav className="border-b-2">
-        <div className="max-w-7xl mx-auto flex justify-between items-center py-8">
-            <div className="pl-2">
-                <a href="" className="class">
-                    <span className="font-medium">OLHA</span> 
-                    <span className="font-extrabold bg-gradient-to-r from-neutral-800 to-pink-400 bg-clip-text text-transparent">VITYUK</span>
-                </a>
-            </div>
-            <div className="md:hidden">
-                <button onClick={toggleMenu} className="text-2xl pr-2 focus:outline-none" aria-label={isOpen ? "Close menu" : "Open menu"}>
-                {isOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
-                </button>
-            </div>
-            <div className="hidden md:flex space-x-8 md:space-x-4 pr-2">
-                {LINKS.map((link, index) => (
-                    <a key={index} href={link.link} className="uppercase text-sm font-medium">
-                        {link.name}
-                    </a>
-                ))}
-            </div>
-        </div>
-        <div className={`${isOpen ? "block" : "hidden"} md:hidden absolute bg-neutral-50 w-full py-5 px-4 mt-2 border-b-4`}>
-                {LINKS.map((links, index) => (
-                    <a key={index} href={links.link} className="uppercase text-lg font-medium block py-2 tracking-wide">
-                        {links.name}
-                    </a>
-                ))}
-        </div>
+    <nav className="fixed top-8 left-1/2 w-[80%] -translate-x-1/2 
+    p-4 bg-white/30 backdrop-blur 
+    border border-red-800/70
+    shadow-[0_6px_6px_rgba(0,0,0,0.5)] rounded-full">
+        <ul className="flex items-center justify-center gap-16">
+  <li>
+    <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group">
+      Послуги
+      <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+    </a>
+  </li>
+  <li>
+    <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group">
+      Про мене
+      <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+    </a>
+  </li>
+  <li>
+    <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group ">
+      Відгуки
+      <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+    </a>
+  </li>
+  <li>
+    <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group">
+      Контакт
+      <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-700 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+    </a>
+  </li>
+</ul>
     </nav>
   )
 }

@@ -1,12 +1,13 @@
+import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden antialiased text-neutral-800">
+    <div className="text-neutral-800">
+      <HeroSection />
       <Navbar />
-      <Hero />
-    </main>
+    </div>
+    
   )
 }
 

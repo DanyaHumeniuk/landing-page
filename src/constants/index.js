@@ -23,10 +23,6 @@ export const LINKS = [
     link: "#services",
   },
   {
-    name: "Портфоліо",
-    link: "#portfolio",
-  },
-  {
     name: "Про мене",
     link: "#about",
   },
