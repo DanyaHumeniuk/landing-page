@@ -1,37 +1,106 @@
-
+import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
-  return (
-    <nav className="mx-auto w-[90%] p-4 bg-white/40 rounded-full 
-  lg:w-[65%] backdrop-blur-3xl mt-8 flex justify-center items-center">
-        <ul className="flex items-center justify-center gap-12 md:gap-16 lg:gap-24 ">
-            <li>
-                <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer ">
-                Послуги
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
-                </a>
-            </li>
-            <li>
-                <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer ">
-                Про мене
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
-                </a>
-            </li>
-            <li>
-                <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer ">
-                Відгуки
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
-                </a>
-            </li>
-            <li>
-                <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer ">
-                Контакт
-                <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
-                </a>
-            </li>
-</ul>
-    </nav>
-  )
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false)
+
+    const toggleNavbar = () => {
+        setMobileDrawerOpen(!mobileDrawerOpen)
+    }
+
+    useEffect(() => {
+        if (mobileDrawerOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "auto"
+        }
+    }, [mobileDrawerOpen])
+
+    return (
+        <>
+            <nav className="mx-auto w-[90%] p-4 bg-white/40 rounded-full 
+        lg:w-[65%] backdrop-blur-3xl mt-8 flex justify-between items-center overflow-hidden">
+        
+                <div className="flex items-center justify-center shrink-0">
+                    <img src={logo} alt="" className="h-12 w-12 scale-150 object-contain shrink-0 grow-0 ml-4"/>
+                </div>
+                <ul className="hidden lg:flex items-center justify-center gap-4 lg:gap-8 mx-4">
+                    
+                    <li>
+                        <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        Послуги
+                        <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        Про мене
+                        <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        Відгуки
+                        <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        Контакт
+                        <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <button className="lg:hidden mr-2" onClick={toggleNavbar}>
+                    {mobileDrawerOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
+                
+        
+
+            </nav>
+            <AnimatePresence>
+                {mobileDrawerOpen && (
+                    <div className="fixed inset-0 z-30 bg-black/30 backdrop-blur-sm lg:hidden">
+                        <motion.div key="drawer"
+                                    initial={{ x: "100%" }}
+                                    animate={{ x: 0 }}
+                                    exit={{ x: "100%" }}
+                                    transition={{ type: "tween", duration: 0.4 }} className="fixed top-0 right-0 w-9/12 h-screen bg-white flex flex-col items-center p-8 gap-6 z-40 lg:hidden rounded-l-3xl">
+                            
+                            <button className="self-end" onClick={toggleNavbar}>
+                                <X size={28} />
+                            </button>
+                            
+                            
+                            <div className="flex flex-col border border-red-300 
+                                px-4 sm:px-6 md:px-8 
+                                max-w-[90vw] sm:max-w-[80vw] 
+                                w-full 
+                                min-h-[60vh]
+                                rounded-3xl items-center justify-center py-20 my-16">
+                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
+                                    <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                                </a>
+                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Про мене
+                                    <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                                </a>
+                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Відгуки
+                                    <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                                </a>
+                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Контакт
+                                    <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                                </a>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+        </>
+
+    )
 }
 
 export default Navbar
