@@ -14,11 +14,11 @@ const HeroSection = () => {
                     <hr class="border-t-2 border-neutral-900 my-1 w-[150px]"/>
                     <p className="font-semibold text-neutral-700 text-sm">Тета-практик</p>
                     <p className="mt-8 lg:ml-3 lg:mt-16 tracking-tight lg:text-xl">Тета-практика — це шлях до глибокого внутрішнього зцілення, пробудження Супер Сили та розкриття родових ресурсів. Через м’які, але трансформаційні практики відкриваються нові горизонти мислення, зникають обмеження, а на їх місце приходить ясність, довіра до себе та внутрішній спокій. Кожна сесія — це простір для душі, де народжується нове бачення себе та свого життя. Тут починається шлях до глибокої любові до себе та життя в гармонії.</p>
-                    <div className="mt-8 p-1 lg:mt-16 rounded-md bg-red-600 text-white cursor-pointer hover:animate-glow">
+                    <button className="mt-8 p-1 lg:mt-16 rounded-md bg-red-600 text-white cursor-pointer hover:animate-glow">
                         <a>
                             Записатись на консультацію!
                         </a>
-                    </div>
+                    </button>
                 </div>
             </div>
             
