@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
+import About from "./components/About"
 import background from './assets/background.jpg';
 
 
@@ -16,6 +17,7 @@ const App = () => {
         <Navbar />
         <HeroSection />
         <Services />
+        <About />
       </div>
       
     </div>
