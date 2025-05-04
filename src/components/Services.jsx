@@ -6,9 +6,9 @@ const Services = () => {
     p-8 bg-white/30 
     rounded-3xl backdrop-blur-3xl 
     gap-0 lg:w-[65%] overflow-visible lg:min-h-[75vh] lg:h-auto">
-        <div className="flex justify-center text-3xl lg:text-4xl">Мої послуги</div>
+        <div className="flex justify-center text-3xl lg:text-4xl underline underline-offset-8 decoration-rose-600 lg:mt-4">Мої послуги</div>
         {SERVICES_CONTENT.map((service, index) => (
-            <div key={index} className="flex flex-wrap lg:justify-center my-14">
+            <div key={index} className="flex flex-wrap lg:justify-center my-14 lg:mt-24">
                 <div className="w-full lg:w-1/4">
                     <img src={service.image} width={150} height={1} alt={service.alt} className="mb-6 rounded-xl w-48 h-auto" />
                 </div>
