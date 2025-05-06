@@ -18,6 +18,14 @@ const Navbar = () => {
         }
     }, [mobileDrawerOpen])
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          setMobileDrawerOpen(false); 
+        }
+      };
+
     return (
         <>
             <nav className="mx-auto w-[90%] p-4 bg-white/40 rounded-full 
@@ -29,25 +37,25 @@ const Navbar = () => {
                 <ul className="hidden lg:flex items-center justify-center gap-4 lg:gap-8 mx-4">
                     
                     <li>
-                        <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        <a onClick={() => scrollToSection("services")} className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
                         Послуги
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         </a>
                     </li>
                     <li>
-                        <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        <a onClick={() => scrollToSection("about")} className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
                         Про мене
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         </a>
                     </li>
                     <li>
-                        <a className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        <a onClick={() => scrollToSection("reviews")} className="no-underline  font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
                         Відгуки
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         </a>
                     </li>
                     <li>
-                        <a className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
+                        <a onClick={() => scrollToSection("contact")} className="no-underline font-medium relative py-[5px] transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base">
                         Контакт
                         <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                         </a>
@@ -81,16 +89,16 @@ const Navbar = () => {
                                 w-full 
                                 min-h-[60vh]
                                 rounded-3xl items-center justify-center py-20 my-16">
-                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
+                                <a onClick={() => scrollToSection("services")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
-                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Про мене
+                                <a onClick={() => scrollToSection("about")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Про мене
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
-                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Відгуки
+                                <a onClick={() => scrollToSection("reviews")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Відгуки
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
-                                <a href="#" className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Контакт
+                                <a onClick={() => scrollToSection("contact")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Контакт
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
                             </div>

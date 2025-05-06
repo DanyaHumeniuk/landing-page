@@ -15,9 +15,15 @@ const App = () => {
       ></div>
       <div>
         <Navbar />
-        <HeroSection />
-        <Services />
-        <About />
+        <div id="hero">
+          <HeroSection />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="about">
+          <About />
+        </div>
       </div>
       
     </div>
