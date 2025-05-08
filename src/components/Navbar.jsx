@@ -20,17 +20,41 @@ const Navbar = () => {
     }, [mobileDrawerOpen])
 
     const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-          setMobileDrawerOpen(false); 
-        }
+        const target = document.getElementById(id);
+        if (!target) return;
+      
+        setMobileDrawerOpen(false); 
+      
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 900;
+        let start = null;
+      
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          const easing = (t) =>
+            t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      
+          const scrollY = startPosition + distance * easing(progress / duration);
+          window.scrollTo(0, scrollY);
+      
+          if (progress < duration) {
+            requestAnimationFrame(step);
+          } else {
+            window.scrollTo(0, targetPosition);
+          }
+        };
+      
+        requestAnimationFrame(step);
       };
+      
 
     return (
         <>
             <nav className="mx-auto w-[90%] p-4 bg-white/40 rounded-full 
-        lg:w-[65%] backdrop-blur-3xl mt-8 flex justify-between items-center overflow-hidden">
+        lg:w-[65%] backdrop-blur-3xl mt-8 lg:my-14 flex justify-between items-center overflow-hidden">
         
                 <div className="flex items-center justify-center shrink-0">
                     <img src={logo} alt="" className="h-12 w-12 scale-150 object-contain shrink-0 grow-0 ml-4"/>
@@ -89,7 +113,7 @@ const Navbar = () => {
                                 max-w-[90vw] sm:max-w-[80vw] 
                                 w-full 
                                 min-h-[60vh]
-                                rounded-3xl items-center justify-center py-20 my-20 mx-auto">
+                                rounded-3xl items-center justify-center py-20 mt-20 mx-auto">
                                 <a onClick={() => scrollToSection("services")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
@@ -104,7 +128,7 @@ const Navbar = () => {
                                 </a>
                             </div>
 
-                            <div className="flex gap-10 text-neutral-800 hover">
+                            <div className="flex gap-10 text-neutral-800 hover mt-14">
                                 <a  href="https://instagram.com/yourprofile"><FaInstagram size={24} className="hover:text-red-600"/></a>
                                 <a href="https://t.me/yourusername"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
                                 <a href="mailto:olgavityuk55@gmail.com"><FaEnvelope size={24} className="hover:text-red-600"/></a>
