@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaInstagram, FaTelegramPlane, FaEnvelope } from 'react-icons/fa';
 import logo from "../assets/logo.png"
 
 const Navbar = () => {
@@ -78,7 +79,7 @@ const Navbar = () => {
                                     exit={{ x: "100%" }}
                                     transition={{ type: "tween", duration: 0.4 }} className="fixed top-0 right-0 w-9/12 h-screen bg-white flex flex-col items-center p-8 gap-6 z-40 lg:hidden rounded-l-3xl">
                             
-                            <button className="self-end" onClick={toggleNavbar}>
+                            <button className="self-end hover:text-red-600" onClick={toggleNavbar}>
                                 <X size={28} />
                             </button>
                             
@@ -88,7 +89,7 @@ const Navbar = () => {
                                 max-w-[90vw] sm:max-w-[80vw] 
                                 w-full 
                                 min-h-[60vh]
-                                rounded-3xl items-center justify-center py-20 my-16">
+                                rounded-3xl items-center justify-center py-20 my-20 mx-auto">
                                 <a onClick={() => scrollToSection("services")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
@@ -101,6 +102,12 @@ const Navbar = () => {
                                 <a onClick={() => scrollToSection("contact")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Контакт
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
+                            </div>
+
+                            <div className="flex gap-10 text-neutral-800 hover">
+                                <a  href="https://instagram.com/yourprofile"><FaInstagram size={24} className="hover:text-red-600"/></a>
+                                <a href="https://t.me/yourusername"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
+                                <a href="mailto:olgavityuk55@gmail.com"><FaEnvelope size={24} className="hover:text-red-600"/></a>
                             </div>
                         </motion.div>
                     </div>

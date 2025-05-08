@@ -2,6 +2,8 @@ import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
 import About from "./components/About"
+import FadeInSection from "./components/FadeInSection"
+import ScrollFloatSection from "./components/ScrollFloat";
 import background from './assets/background.jpg';
 
 
@@ -19,10 +21,14 @@ const App = () => {
           <HeroSection />
         </div>
         <div id="services">
-          <Services />
+          <ScrollFloatSection>
+            <Services />
+          </ScrollFloatSection>
         </div>
         <div id="about">
-          <About />
+          <ScrollFloatSection>
+            <About />
+          </ScrollFloatSection>
         </div>
       </div>
       
