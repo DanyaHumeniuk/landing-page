@@ -5,6 +5,7 @@ import About from "./components/About"
 import Reviews from "./components/Reviews"
 import Contact from "./components/Contact"
 import ScrollFloatSection from "./components/ScrollFloat";
+import Footer from "./components/Footer"
 import background from './assets/background.jpg';
 
 
@@ -38,6 +39,9 @@ const App = () => {
         </div>
         <div id="contact">
           <Contact />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
       

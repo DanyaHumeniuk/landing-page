@@ -1,6 +1,6 @@
 
 
-const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
+const ShinyText = ({ text, disabled = false, speed = 3, className = '' }) => {
     const animationStyle = !disabled
       ? {
         backgroundImage:
@@ -11,7 +11,7 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
           color: '#b5b5b5a4',
           animation: `shine ${speed}s linear infinite`,
         }
-      : { color: '#b5b5b5a4' };
+      : { color: '#9e9e9e' };
   
     return (
       <span className={`inline-block ${className}`} style={animationStyle}>
