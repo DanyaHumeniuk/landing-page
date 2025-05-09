@@ -2,7 +2,8 @@ import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
 import About from "./components/About"
-import FadeInSection from "./components/FadeInSection"
+import Reviews from "./components/Reviews"
+import Contact from "./components/Contact"
 import ScrollFloatSection from "./components/ScrollFloat";
 import background from './assets/background.jpg';
 
@@ -29,6 +30,14 @@ const App = () => {
           <ScrollFloatSection>
             <About />
           </ScrollFloatSection>
+        </div>
+        <div id="reviews">
+          <ScrollFloatSection>
+            <Reviews />
+          </ScrollFloatSection>
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
       </div>
       
