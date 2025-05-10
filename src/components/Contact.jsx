@@ -11,7 +11,8 @@ const Contact = () => {
 
         <div className="text-center tracking-tighter">
             <motion.p whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x: -100}} transition={{duration: 1}} className="my-4">{CONTACT.phoneNo}</motion.p>
-            <motion.a viewport={{ once: true }} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x: 100}} transition={{duration: 1}} href="mailto:olgavityuk55@gmail.com" >{CONTACT.email}</motion.a>
+            <motion.p whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x: 100}} transition={{duration: 1}} className="my-4" >{CONTACT.telegram}</motion.p>
+            <motion.a viewport={{ once: true }} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x: -100}} transition={{duration: 1}} href="mailto:olgavityuk55@gmail.com" className="my-4">{CONTACT.email}</motion.a>
         </div>
     </div>
   )
