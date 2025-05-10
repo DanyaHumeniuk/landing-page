@@ -118,7 +118,7 @@ const Navbar = () => {
                                 max-w-[90vw] sm:max-w-[80vw] 
                                 w-full 
                                 min-h-[60vh]
-                                rounded-3xl items-center justify-center py-20 mt-20 mx-auto">
+                                rounded-3xl items-center justify-center py-20 mt-16 mx-auto">
                                 <a onClick={() => scrollToSection("services")} className="block text-center no-underline font-medium relative transition-colors duration-300 ease-in-out group cursor-pointer sm:text-base my-6">Послуги
                                     <span className="absolute left-1/2 bottom-0 h-[2px] w-0 bg-red-600 transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0"></span>
                                 </a>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                 </a>
                             </div>
 
-                            <div className="flex gap-10 text-neutral-800 hover mt-14">
+                            <div className="flex gap-10 text-neutral-800 hover mt-10">
                                 <a  href="https://www.instagram.com/olgavityuk23?igsh=MW02eTNkcWQwb2hmaQ=="><FaInstagram size={24} className="hover:text-red-600"/></a>
                                 <a href="https://t.me/+vFjv-P6-CtcxMjky"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
                                 <a href="mailto:olgavityuk55@gmail.com"><FaEnvelope size={24} className="hover:text-red-600"/></a>
