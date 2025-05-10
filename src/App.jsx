@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="text-neutral-800 overflow-x-hidden">
       <div 
-        className="fixed top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat -z-10"
+        className="fixed top-0 left-0 inset-0 bg-cover bg-center bg-no-repeat -z-10"
         style={{ backgroundImage: `url(${background})` }}
       ></div>
       <div>
