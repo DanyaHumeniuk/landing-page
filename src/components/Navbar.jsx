@@ -96,7 +96,12 @@ const Navbar = () => {
             </nav>
             <AnimatePresence>
                 {mobileDrawerOpen && (
-                    <div className="fixed inset-0 z-30 bg-black/30 backdrop-blur-sm lg:hidden">
+                    <motion.div key="overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }} 
+                        transition={{ duration: 1 }} 
+                        className="fixed inset-0 z-30 bg-black/30 backdrop-blur-sm lg:hidden">
                         <motion.div key="drawer"
                                     initial={{ x: "100%" }}
                                     animate={{ x: 0 }}
@@ -129,12 +134,12 @@ const Navbar = () => {
                             </div>
 
                             <div className="flex gap-10 text-neutral-800 hover mt-14">
-                                <a  href="https://instagram.com/yourprofile"><FaInstagram size={24} className="hover:text-red-600"/></a>
-                                <a href="https://t.me/yourusername"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
+                                <a  href="https://www.instagram.com/olgavityuk23?igsh=MW02eTNkcWQwb2hmaQ=="><FaInstagram size={24} className="hover:text-red-600"/></a>
+                                <a href="https://t.me/+vFjv-P6-CtcxMjky"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
                                 <a href="mailto:olgavityuk55@gmail.com"><FaEnvelope size={24} className="hover:text-red-600"/></a>
                             </div>
                         </motion.div>
-                    </div>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </>
