@@ -133,7 +133,7 @@ const Navbar = () => {
                                 </a>
                             </div>
 
-                            <div className="flex gap-10 text-neutral-800 hover mt-10">
+                            <div className="flex gap-10 text-neutral-800 hover mt-5">
                                 <a  href="https://www.instagram.com/olgavityuk23?igsh=MW02eTNkcWQwb2hmaQ=="><FaInstagram size={24} className="hover:text-red-600"/></a>
                                 <a href="https://t.me/+vFjv-P6-CtcxMjky"><FaTelegramPlane size={24} className="hover:text-red-600"/></a>
                                 <a href="mailto:olgavityuk55@gmail.com"><FaEnvelope size={24} className="hover:text-red-600"/></a>
