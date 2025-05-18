@@ -7,7 +7,7 @@ import Contact from "./components/Contact"
 import ScrollFloatSection from "./components/ScrollFloat";
 import Footer from "./components/Footer"
 import { Analytics } from "@vercel/analytics/react"
-import background from './assets/background.jpg';
+import background from './assets/background1.jpg';
 
 
 const App = () => {

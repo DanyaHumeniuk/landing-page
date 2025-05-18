@@ -45,10 +45,10 @@ const HeroSection = () => {
     <section className="my-8 mx-auto w-[90%] h-auto
     p-8 bg-white/30 
     rounded-3xl backdrop-blur-3xl 
-    gap-0 lg:w-[65%] overflow-visible lg:min-h-[75vh] lg:h-auto">
-        <div className="flex flex-wrap">
+    gap-0 lg:w-[65%] overflow-visible lg:min-h-[75vh] lg:h-auto items-center justify-center flex">
+        <div className="flex flex-wrap justify-center items-center">
             <div className="w-full lg:w-1/2 lg:my-14">
-                <div className="flex flex-col items-center justify-start text-neutral-900">
+                <div className="flex flex-col items-center justify-center text-neutral-900 h-full">
                     <motion.p variants={container(0)} initial="hidden" animate="visible" className="font-light text-4xl lg:text-5xl bg-gradient-to-r from-red-600 to-neutral-900 text-transparent bg-clip-text">Ольга Вітюк</motion.p>
                     <motion.hr variants={container(0)} initial="hidden" animate="visible" class="border-t-2 border-neutral-900 my-1 w-[150px]"/>
                     <motion.p variants={container(0)} initial="hidden" animate="visible" className="font-semibold text-neutral-700 text-sm">Тета-практик</motion.p>
